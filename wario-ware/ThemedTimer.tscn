@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ch0ete1dwmhb2"]
+
+[ext_resource type="Script" uid="uid://sd801yfpn4o4" path="res://minigame_scene.gd" id="1_vvoac"]
+
+[node name="ThemedTimer" type="Node2D" unique_id=31965389]
+script = ExtResource("1_vvoac")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=554278756]
+offset_right = 72.0
+offset_bottom = 64.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"

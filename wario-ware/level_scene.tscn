@@ -1,3 +1,56 @@
 [gd_scene format=3 uid="uid://0peihuv2yioi"]
 
+[ext_resource type="Script" uid="uid://dle7l4vcqvipw" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://qlf7u0bl5xaj" path="res://images/placeholders/Screenshot 2026-06-25 184055.png" id="1_187gu"]
+[ext_resource type="Texture2D" uid="uid://dje1xurscfo76" path="res://images/placeholders/icon.svg" id="2_3mivm"]
+
 [node name="level_scene" type="Node2D" unique_id=671350636]
+script = ExtResource("1_3mivm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1257870572]
+offset_right = 1151.0
+offset_bottom = 648.0
+texture = ExtResource("1_187gu")
+
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=801694563]
+offset_left = 256.0
+offset_top = 130.0
+offset_right = 912.0
+offset_bottom = 258.0
+
+[node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=2038988585]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=1091072766]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=1615868825]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=547097446]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1516929796]
+layout_mode = 2
+texture = ExtResource("2_3mivm")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1208705419]
+offset_left = 486.0
+offset_top = 295.0
+offset_right = 657.0
+offset_bottom = 364.0
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=226307618]
+offset_left = 526.0
+offset_top = 512.0
+offset_right = 648.0
+offset_bottom = 578.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+fit_content = true

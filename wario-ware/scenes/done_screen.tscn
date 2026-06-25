@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c2p2boews4jfe"]
+
+[ext_resource type="Script" uid="uid://g7fo1iwuu4cm" path="res://scenes/done_screen.gd" id="1_uqm27"]
+[ext_resource type="Texture2D" uid="uid://qlf7u0bl5xaj" path="res://images/placeholders/Screenshot 2026-06-25 184055.png" id="2_k66lo"]
+
+[node name="done_screen" type="Node2D" unique_id=1410367120]
+script = ExtResource("1_uqm27")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1764955329]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("2_k66lo")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=892457620]
+clip_contents = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 65.0
+offset_top = 74.0
+offset_right = 1105.0
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "Congrats! You Won!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1664484306]
+offset_left = 406.0
+offset_top = 261.0
+offset_right = 748.0
+offset_bottom = 551.0
+
+[node name="menu" type="Button" parent="VBoxContainer" unique_id=896744374]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=101364265]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
