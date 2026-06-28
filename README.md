@@ -2,9 +2,9 @@
 You are a simple Goose that has a big appetite for Bread and annoying people.
 A simple WarioWare like game with fast paced minigames.
 
-<img width="630" height="500" alt="cover" src="https://github.com/user-attachments/assets/d3323b09-481a-484d-a5d1-60398c8f7397" />
-<img width="630" height="500" alt="Screenshot 2026-06-28 213525" src="https://github.com/user-attachments/assets/127452f5-dcc3-43c7-904d-3c8ec3b4ec07" />
-<img width="630" height="500" alt="Screenshot 2026-06-28 213538" src="https://github.com/user-attachments/assets/fea1c1e5-9786-48f1-a8b5-a03bbefb300e" />
+<img width="315" height="250" alt="cover" src="https://github.com/user-attachments/assets/d3323b09-481a-484d-a5d1-60398c8f7397" />
+<img width="315" height="250" alt="Screenshot 2026-06-28 213525" src="https://github.com/user-attachments/assets/127452f5-dcc3-43c7-904d-3c8ec3b4ec07" />
+<img width="315" height="250" alt="Screenshot 2026-06-28 213538" src="https://github.com/user-attachments/assets/fea1c1e5-9786-48f1-a8b5-a03bbefb300e" />
 
 Controls:
 * WASD or Arrows to Move
