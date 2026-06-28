@@ -1,6 +1,47 @@
 [gd_scene format=3 uid="uid://qhpmor33atpb"]
 
 [ext_resource type="Script" uid="uid://dcqq1s55nmr1o" path="res://minigame_3.gd" id="1_t3ksd"]
+[ext_resource type="Texture2D" uid="uid://cqeo6qiucobdg" path="res://images/Background2.png" id="2_cdg48"]
+[ext_resource type="Texture2D" uid="uid://b22jq54bgljh" path="res://images/minigame3/Minigame5.png" id="3_1i1uu"]
+[ext_resource type="Texture2D" uid="uid://dlfn8643s8wgh" path="res://images/minigame3/Minigame4.png" id="4_0abbc"]
+[ext_resource type="Script" uid="uid://cw4ujwhv7qtnm" path="res://texture_rect.gd" id="4_1i1uu"]
+[ext_resource type="Texture2D" uid="uid://bovhmtbkhyetg" path="res://images/minigame3/Minigame3.png" id="5_elj0y"]
+[ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://ThemedTimer.tscn" id="7_0abbc"]
+[ext_resource type="Script" uid="uid://do7bhv5330842" path="res://texture_button.gd" id="7_elj0y"]
 
 [node name="Minigame_3" type="Node2D" unique_id=292362315]
 script = ExtResource("1_t3ksd")
+
+[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=597977386]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(40, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=1280701454]
+offset_right = 568.8361
+offset_bottom = 323.0
+texture = ExtResource("2_cdg48")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1715872153]
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 315.0
+offset_bottom = 325.0
+texture = ExtResource("3_1i1uu")
+script = ExtResource("4_1i1uu")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=609703981]
+offset_left = 139.0
+offset_top = -22.0
+offset_right = 472.0
+offset_bottom = 316.61237
+texture_normal = ExtResource("4_0abbc")
+texture_pressed = ExtResource("5_elj0y")
+stretch_mode = 0
+script = ExtResource("7_elj0y")
+
+[node name="ThemedTimer" parent="." unique_id=31965389 instance=ExtResource("7_0abbc")]
+position = Vector2(372, 31)
+
+[connection signal="pressed" from="TextureButton" to="TextureRect" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

@@ -84,7 +84,7 @@ position = Vector2(573, 667)
 shape = SubResource("RectangleShape2D_qmg03")
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=591699000]
-position = Vector2(70.45459, -213.6365)
+position = Vector2(68.18187, -218.18198)
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1078803956]
 offset_left = 563.0
@@ -98,7 +98,7 @@ position = Vector2(713, 718.5)
 shape = SubResource("RectangleShape2D_ykh0f")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=714439973]
-position = Vector2(-186.36377, -345.45477)
+position = Vector2(-188.6365, -356.81842)
 
 [node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1668705412]
 offset_left = 467.0
