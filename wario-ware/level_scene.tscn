@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4jr6cueos4bi" path="res://images/items/bread.png" id="3_3mivm"]
 
 [node name="level_scene" type="Node2D" unique_id=671350636]
+scale = Vector2(0.5199997, 0.5199997)
 script = ExtResource("1_3mivm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1257870572]
@@ -14,10 +15,10 @@ texture = ExtResource("2_3mivm")
 stretch_mode = 1
 
 [node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=801694563]
-offset_left = 256.0
-offset_top = 130.0
-offset_right = 912.0
-offset_bottom = 258.0
+offset_left = 150.00009
+offset_top = 115.38468
+offset_right = 806.0001
+offset_bottom = 243.38467
 
 [node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=2038988585]
 layout_mode = 2
@@ -45,19 +46,19 @@ texture = ExtResource("3_3mivm")
 expand_mode = 2
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=1208705419]
-offset_left = 486.0
-offset_top = 295.0
-offset_right = 657.0
-offset_bottom = 364.0
+offset_left = 376.92328
+offset_top = 292.3079
+offset_right = 547.9233
+offset_bottom = 361.3079
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/normal_font_size = 42
 text = "Level #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=226307618]
-offset_left = 526.0
-offset_top = 512.0
-offset_right = 648.0
-offset_bottom = 578.0
+offset_left = 426.92334
+offset_top = 498.07724
+offset_right = 548.92334
+offset_bottom = 564.0773
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/normal_font_size = 42
 text = "0.0"

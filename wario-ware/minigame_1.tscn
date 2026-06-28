@@ -53,6 +53,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmg03"]
 
 [node name="Minigame_1" type="Node2D" unique_id=1931050555]
+scale = Vector2(0.4399997, 0.4399997)
 script = ExtResource("1_r6gmb")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=342224634]
@@ -69,6 +70,7 @@ stretch_mode = 1
 position = Vector2(112.33302, 117.9719)
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=610749204]
+position = Vector2(0, 45.454575)
 
 [node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=60423053]
 offset_left = -52.0
@@ -82,7 +84,7 @@ position = Vector2(573, 667)
 shape = SubResource("RectangleShape2D_qmg03")
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=591699000]
-position = Vector2(137, -257)
+position = Vector2(70.45459, -213.6365)
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1078803956]
 offset_left = 563.0
@@ -96,7 +98,7 @@ position = Vector2(713, 718.5)
 shape = SubResource("RectangleShape2D_ykh0f")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=714439973]
-position = Vector2(-167, -392)
+position = Vector2(-186.36377, -345.45477)
 
 [node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1668705412]
 offset_left = 467.0
@@ -110,7 +112,7 @@ position = Vector2(617.5, 718.5)
 shape = SubResource("RectangleShape2D_ykh0f")
 
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=1451178116]
-position = Vector2(263, -505)
+position = Vector2(231.81834, -481.8185)
 
 [node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1495701653]
 offset_left = 467.0
@@ -124,11 +126,11 @@ position = Vector2(617.5, 727.5)
 shape = SubResource("RectangleShape2D_ykh0f")
 
 [node name="Player" parent="." unique_id=393043266 instance=ExtResource("2_gi7k6")]
-position = Vector2(111, 513)
+position = Vector2(104.54553, 577.27313)
 scale = Vector2(1.4000026, 1.4000026)
 
 [node name="Garlic" type="Node2D" parent="." unique_id=847776629]
-position = Vector2(1017.0001, 483.00003)
+position = Vector2(965.9098, 520.45496)
 scale = Vector2(0.72, 0.72)
 script = ExtResource("4_wh6qq")
 
@@ -151,7 +153,7 @@ scale = Vector2(8.679997, 8.679997)
 shape = SubResource("CircleShape2D_qmg03")
 
 [node name="Garlic2" type="Node2D" parent="." unique_id=1161509268]
-position = Vector2(835, 87)
+position = Vector2(784.09143, 95.45461)
 scale = Vector2(0.72, 0.72)
 script = ExtResource("4_wh6qq")
 
@@ -174,7 +176,7 @@ scale = Vector2(8.679997, 8.679997)
 shape = SubResource("CircleShape2D_qmg03")
 
 [node name="Garlic3" type="Node2D" parent="." unique_id=1108641512]
-position = Vector2(542, 377.99997)
+position = Vector2(486.36395, 434.09122)
 scale = Vector2(0.72, 0.72)
 script = ExtResource("4_wh6qq")
 

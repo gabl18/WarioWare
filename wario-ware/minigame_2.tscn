@@ -1,22 +1,21 @@
 [gd_scene format=3 uid="uid://c35x1ddsg8pm7"]
 
 [ext_resource type="Script" uid="uid://bn6a0bh1778iu" path="res://minigame_2.gd" id="1_5x31c"]
-[ext_resource type="Texture2D" uid="uid://bcporj064xor0" path="res://images/Background4.png" id="2_n6gid"]
+[ext_resource type="Texture2D" uid="uid://dc8ulavhhgpnd" path="res://images/Background3.png" id="2_n6gid"]
 [ext_resource type="Script" uid="uid://bodvvbmjryo2w" path="res://button_1.gd" id="2_vdqgs"]
-[ext_resource type="Texture2D" uid="uid://cijo2fi03vaxk" path="res://images/UIandButtons/Button2.png" id="3_n6gid"]
+[ext_resource type="Texture2D" uid="uid://c630t3yan7pv8" path="res://images/items/bread1.png" id="3_n6gid"]
 [ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://ThemedTimer.tscn" id="4_3qiw4"]
-[ext_resource type="Texture2D" uid="uid://wx2jpyks2m7w" path="res://images/UIandButtons/Button4.png" id="4_u32kt"]
-[ext_resource type="Texture2D" uid="uid://3i8ke0gcfoiv" path="res://images/UIandButtons/Button3.png" id="5_v84ot"]
+[ext_resource type="Texture2D" uid="uid://catuh2ft8286x" path="res://images/items/bread3.png" id="4_u32kt"]
+[ext_resource type="Texture2D" uid="uid://dfev6lty4wqhd" path="res://images/items/bread2.png" id="5_v84ot"]
 
 [node name="Minigame_2" type="Node2D" unique_id=1733549341]
+scale = Vector2(0.40000135, 0.40000135)
 script = ExtResource("1_5x31c")
 
-[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1430916101]
-repeat_size = Vector2(800, 0)
-
-[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=1650704635]
+[node name="Background" type="TextureRect" parent="." unique_id=1650704635]
 offset_right = 1150.0
 offset_bottom = 653.0
+scale = Vector2(1.299999, 1.299999)
 texture = ExtResource("2_n6gid")
 stretch_mode = 1
 
@@ -26,16 +25,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 104.0
-offset_top = 84.0
-offset_right = 504.0
-offset_bottom = 484.0
+offset_left = 112.49962
+offset_top = 152.49948
+offset_right = 512.49963
+offset_bottom = 552.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=1470387586]
@@ -44,16 +44,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 370.0
-offset_top = 241.0
-offset_right = 770.0
-offset_bottom = 641.0
+offset_left = 378.49963
+offset_top = 309.49948
+offset_right = 778.49963
+offset_bottom = 709.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=587235550]
@@ -62,16 +63,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 794.0
-offset_top = 96.0
-offset_right = 1194.0
-offset_bottom = 496.0
+offset_left = 802.49963
+offset_top = 164.49948
+offset_right = 1202.4996
+offset_bottom = 564.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="Button_4" type="TextureButton" parent="." unique_id=1152386803]
@@ -80,16 +82,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 191.0
-offset_top = 454.0
-offset_right = 591.0
-offset_bottom = 854.0
+offset_left = 199.49962
+offset_top = 522.4995
+offset_right = 599.49963
+offset_bottom = 922.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="Button_5" type="TextureButton" parent="." unique_id=1916122429]
@@ -98,16 +101,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 650.0
-offset_top = 354.0
-offset_right = 1050.0
-offset_bottom = 754.0
+offset_left = 658.49963
+offset_top = 422.49948
+offset_right = 1058.4996
+offset_bottom = 822.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="Button_6" type="TextureButton" parent="." unique_id=1296756331]
@@ -116,16 +120,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 950.0
-offset_top = 455.0
-offset_right = 1350.0
-offset_bottom = 855.0
+offset_left = 958.49963
+offset_top = 523.4995
+offset_right = 1358.4996
+offset_bottom = 923.4995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35999817, 0.35999817)
 texture_normal = ExtResource("3_n6gid")
 texture_pressed = ExtResource("4_u32kt")
 texture_hover = ExtResource("5_v84ot")
+stretch_mode = 0
 script = ExtResource("2_vdqgs")
 
 [node name="ThemedTimer" parent="." unique_id=31965389 instance=ExtResource("4_3qiw4")]
