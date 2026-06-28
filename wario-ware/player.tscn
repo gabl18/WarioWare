@@ -1,16 +1,60 @@
 [gd_scene format=3 uid="uid://kewosgkdb532"]
 
 [ext_resource type="Script" uid="uid://cb5ive63sgq3o" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dje1xurscfo76" path="res://images/placeholders/icon.svg" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://b4bo7ncpqr6j8" path="res://images/Goose1.png" id="2_onrkg"]
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hqtel"]
+resource_name = "goose_walk"
+length = 1.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sweqy"]
+_data = {
+&"RESET": SubResource("Animation_i3pqv"),
+&"goose_walk": SubResource("Animation_hqtel")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmg03"]
-radius = 63.007935
+radius = 41.0
 
 [node name="Player" type="CharacterBody2D" unique_id=393043266]
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=312758513]
-texture = ExtResource("2_i3pqv")
+texture_filter = 1
+texture = ExtResource("2_onrkg")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1872471016]
+libraries/ = SubResource("AnimationLibrary_sweqy")
+autoplay = &"goose_walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1027182116]
 shape = SubResource("CircleShape2D_qmg03")
