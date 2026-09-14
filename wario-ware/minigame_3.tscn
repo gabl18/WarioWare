@@ -8,8 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bovhmtbkhyetg" path="res://images/minigame3/Minigame3.png" id="5_elj0y"]
 [ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://ThemedTimer.tscn" id="7_0abbc"]
 [ext_resource type="Script" uid="uid://do7bhv5330842" path="res://texture_button.gd" id="7_elj0y"]
+[ext_resource type="PackedScene" uid="uid://bksugm73a3w4e" path="res://scenes/intro_text.tscn" id="9_jqvox"]
 
 [node name="Minigame_3" type="Node2D" unique_id=292362315]
+scale = Vector2(1.9783462, 1.9783462)
 script = ExtResource("1_t3ksd")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=597977386]
@@ -23,18 +25,17 @@ texture = ExtResource("2_cdg48")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1715872153]
-offset_left = -1.0
-offset_top = 2.0
-offset_right = 315.0
-offset_bottom = 325.0
+offset_left = 1.0
+offset_right = 317.0
+offset_bottom = 323.0
 texture = ExtResource("3_1i1uu")
 script = ExtResource("4_1i1uu")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=609703981]
-offset_left = 139.0
-offset_top = -22.0
-offset_right = 472.0
-offset_bottom = 316.61237
+offset_left = 151.13634
+offset_top = -16.175127
+offset_right = 484.13635
+offset_bottom = 322.43723
 texture_normal = ExtResource("4_0abbc")
 texture_pressed = ExtResource("5_elj0y")
 stretch_mode = 0
@@ -42,6 +43,9 @@ script = ExtResource("7_elj0y")
 
 [node name="ThemedTimer" parent="." unique_id=31965389 instance=ExtResource("7_0abbc")]
 position = Vector2(372, 31)
+
+[node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("9_jqvox")]
+position = Vector2(199.66173, 146.0816)
 
 [connection signal="pressed" from="TextureButton" to="TextureRect" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

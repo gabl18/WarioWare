@@ -2,19 +2,22 @@ extends Node2D
 
 @onready var themed_timer: Node2D = $ThemedTimer 
 # ^^^ You dragged this in the scene by the way 
+@onready var intro_text: Node2D = $IntroText
 
 
 
 var garlic_collected = 0 # just keeping track of garlic collected
 var timer_end = false # boolean (true or false) stating whether the timer ended
+var task_text = "COLLECT ALL BREAD!"
 
 func _ready() -> void:
 
 		#Below you can see that I have a function that I named. I grab a 
 		#function from it that was created in it's script and use `await` to 
 		# tell the script to wait for a signal, or for when a function finshes
-
-
+	get_tree().paused=true
+	await intro_text.textDisplay(2.0, task_text)
+	get_tree().paused=false
 	await themed_timer.Timer(6.0) #accessing a function from this node
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bcporj064xor0" path="res://images/Background4.png" id="2_ak2if"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1585264742]
+scale = Vector2(1.999999, 1.999999)
 script = ExtResource("1_ak2if")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1567318876]

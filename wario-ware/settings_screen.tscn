@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cbomardd8ofbo" path="res://settings_screen.gd" id="1_pfwel"]
 
 [node name="settings_screen" type="Node2D" unique_id=273009670]
+scale = Vector2(2.0800009, 2.0800009)
 script = ExtResource("1_pfwel")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=2108876258]

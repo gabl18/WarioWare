@@ -1,10 +1,15 @@
 extends Node2D
 @onready var themed_timer: Node2D = $ThemedTimer
+@onready var intro_text: Node2D = $IntroText
 
 var buttons_pressed := 0
 var timer_end = false
+var task_text = "EAT ALL BREAD!"
 
 func _ready() -> void:
+	get_tree().paused=true
+	await intro_text.textDisplay(2.0, task_text)
+	get_tree().paused=false
 	await themed_timer.Timer(4.0)
 	#after this is completed...
 	timer_end = true 

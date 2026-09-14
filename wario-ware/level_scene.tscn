@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4jr6cueos4bi" path="res://images/items/bread.png" id="3_3mivm"]
 
 [node name="level_scene" type="Node2D" unique_id=671350636]
-scale = Vector2(0.5199997, 0.5199997)
+scale = Vector2(1.0704865, 1.0704865)
 script = ExtResource("1_3mivm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1257870572]

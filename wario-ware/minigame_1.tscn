@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://ThemedTimer.tscn" id="3_wh6qq"]
 [ext_resource type="Script" uid="uid://btcsjj55o1n6w" path="res://garlic.gd" id="4_wh6qq"]
 [ext_resource type="Texture2D" uid="uid://c4jr6cueos4bi" path="res://images/items/bread.png" id="6_or1ld"]
+[ext_resource type="PackedScene" uid="uid://bksugm73a3w4e" path="res://scenes/intro_text.tscn" id="7_jife1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
 size = Vector2(1250, 133)
@@ -53,7 +54,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmg03"]
 
 [node name="Minigame_1" type="Node2D" unique_id=1931050555]
-scale = Vector2(0.4399997, 0.4399997)
+scale = Vector2(0.88, 0.88)
 script = ExtResource("1_r6gmb")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=342224634]
@@ -176,7 +177,7 @@ scale = Vector2(8.679997, 8.679997)
 shape = SubResource("CircleShape2D_qmg03")
 
 [node name="Garlic3" type="Node2D" parent="." unique_id=1108641512]
-position = Vector2(486.36395, 434.09122)
+position = Vector2(492.04547, 407.9545)
 scale = Vector2(0.72, 0.72)
 script = ExtResource("4_wh6qq")
 
@@ -197,6 +198,9 @@ scale = Vector2(8.679997, 8.679997)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=366326674]
 shape = SubResource("CircleShape2D_qmg03")
+
+[node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("7_jife1")]
+position = Vector2(463.63635, 293.18182)
 
 [connection signal="garlic_collected" from="Garlic" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Garlic2" to="." method="garlic_collect"]

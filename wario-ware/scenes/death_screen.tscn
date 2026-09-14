@@ -5,9 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://drq3s038skh5e" path="res://images/Emotes/Duck_Emote1.png" id="3_mqh5l"]
 
 [node name="death_screen" type="Node2D" unique_id=145478932]
+scale = Vector2(1.9199997, 1.9199997)
 script = ExtResource("1_dwo6e")
 
-[node name="Background" type="TextureRect" parent="." unique_id=2135974208]
+[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1452462177]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(40, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=2135974208]
 offset_right = 1152.0
 offset_bottom = 649.0
 scale = Vector2(0.52000046, 0.52000046)
