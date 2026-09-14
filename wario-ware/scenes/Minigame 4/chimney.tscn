@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://de237fryiqd7g"]
+
+[ext_resource type="Script" uid="uid://cikier3k2c8u6" path="res://scenes/Minigame 4/chimney.gd" id="1_8wnls"]
+[ext_resource type="Texture2D" uid="uid://d27jjgi24n4b0" path="res://images/minigame 4/chimney.png" id="2_fo0e7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
+size = Vector2(60, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykh0f"]
+size = Vector2(46.5, 202)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psmbb"]
+size = Vector2(60, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjg42"]
+size = Vector2(47, 202)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pt2n"]
+size = Vector2(20, 198)
+
+[node name="Chimney" type="Area2D" unique_id=616709044]
+script = ExtResource("1_8wnls")
+
+[node name="Lower" type="Sprite2D" parent="." unique_id=1377635540]
+position = Vector2(-0.4399948, -61.400024)
+scale = Vector2(1.7600002, 1.7600002)
+texture = ExtResource("2_fo0e7")
+offset = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=473231921]
+position = Vector2(-0.4399948, 113.599976)
+scale = Vector2(1.7600002, 1.7600002)
+shape = SubResource("RectangleShape2D_qmg03")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1322013895]
+position = Vector2(-0.4399948, 306.59998)
+scale = Vector2(1.7600002, 1.7600002)
+shape = SubResource("RectangleShape2D_ykh0f")
+
+[node name="Upper" type="Sprite2D" parent="." unique_id=112954331]
+position = Vector2(0.5600052, 57.600098)
+scale = Vector2(1.7600002, 1.7600002)
+texture = ExtResource("2_fo0e7")
+offset = Vector2(0, -200)
+flip_v = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1030688853]
+position = Vector2(0.5600052, -117.3999)
+scale = Vector2(1.7600002, 1.7600002)
+shape = SubResource("RectangleShape2D_psmbb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1830979671]
+position = Vector2(0.5600052, -310.3999)
+scale = Vector2(1.7600002, 1.7600002)
+shape = SubResource("RectangleShape2D_sjg42")
+
+[node name="ScoreArea" type="Area2D" parent="." unique_id=15836288]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea" unique_id=2063349151]
+position = Vector2(70, -1)
+shape = SubResource("RectangleShape2D_4pt2n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]

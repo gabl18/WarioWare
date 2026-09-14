@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cxxovr0p68uke"]
+[gd_scene format=3 uid="uid://0peihuv2yioi"]
 
-[ext_resource type="Script" path="res://timer_screen.gd" id="1_3mivm"]
-[ext_resource type="Texture2D" path="res://images/Background4.png" id="2_3mivm"]
+[ext_resource type="Script" uid="uid://dle7l4vcqvipw" path="res://scenes/Every Level Used/timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://bcporj064xor0" path="res://images/Backgrounds/Background4.png" id="2_3mivm"]
 [ext_resource type="Texture2D" uid="uid://c4jr6cueos4bi" path="res://images/items/bread.png" id="3_3mivm"]
 
 [node name="level_scene" type="Node2D" unique_id=671350636]

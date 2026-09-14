@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://oi3ahh0psdgp"]
+
+[ext_resource type="Script" uid="uid://y2p5rpnlxypd" path="res://scenes/Main Menu/title_screen.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://bcporj064xor0" path="res://images/Backgrounds/Background4.png" id="2_ak2if"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1585264742]
+scale = Vector2(1.999999, 1.999999)
+script = ExtResource("1_ak2if")
+
+[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1567318876]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(40, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=706682778]
+offset_right = 478.0
+offset_bottom = 321.0
+texture = ExtResource("2_ak2if")
+stretch_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=134936465]
+clip_contents = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 460.0
+offset_bottom = 133.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 50
+text = "Goose Games"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=54536951]
+offset_left = 125.0
+offset_top = 141.0
+offset_right = 363.0
+offset_bottom = 253.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=812839665]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+icon_alignment = 1
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=354148886]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=679803025]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
