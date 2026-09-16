@@ -5,10 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://ctdniwwamiukp" path="res://images/Backgrounds/Background1.png" id="2_or1ld"]
 [ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://scenes/Every Level Used/ThemedTimer.tscn" id="3_wh6qq"]
 [ext_resource type="Script" uid="uid://btcsjj55o1n6w" path="res://scenes/Minigame 1/garlic.gd" id="4_wh6qq"]
-[ext_resource type="Script" uid="uid://crluh2qwogqot" path="res://scenes/Minigame 1/player.gd" id="5_hy3rl"]
 [ext_resource type="Texture2D" uid="uid://c4jr6cueos4bi" path="res://images/items/bread.png" id="6_or1ld"]
-[ext_resource type="PackedScene" uid="uid://bksugm73a3w4e" path="res://scenes/Every Level Used/intro_text.tscn" id="7_jife1"]
-[ext_resource type="Script" uid="uid://dgckm1vqu3xnd" path="res://scenes/Every Level Used/intro_text.gd" id="9_adoid"]
+[ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="7_jife1"]
+[ext_resource type="AudioStream" uid="uid://ct011emshdeht" path="res://music/Microgame 1.mp3" id="10_hy3rl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
 size = Vector2(1250, 133)
@@ -131,7 +130,6 @@ shape = SubResource("RectangleShape2D_ykh0f")
 [node name="Player" parent="." unique_id=393043266 instance=ExtResource("2_gi7k6")]
 position = Vector2(104.54553, 577.27313)
 scale = Vector2(1.4000026, 1.4000026)
-script = ExtResource("5_hy3rl")
 
 [node name="Garlic" type="Node2D" parent="." unique_id=847776629]
 position = Vector2(965.9098, 520.45496)
@@ -204,7 +202,12 @@ shape = SubResource("CircleShape2D_qmg03")
 
 [node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("7_jife1")]
 position = Vector2(463.63635, 293.18182)
-script = ExtResource("9_adoid")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=499738301]
+stream = ExtResource("10_hy3rl")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="garlic_collected" from="Garlic" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Garlic2" to="." method="garlic_collect"]

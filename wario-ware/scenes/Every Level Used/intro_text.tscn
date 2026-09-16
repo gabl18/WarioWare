@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0kahh53oqh5a"]
 
-[ext_resource type="Script" path="res://scenes/intro_text.gd" id="1_xdy68"]
+[ext_resource type="Script" uid="uid://dgckm1vqu3xnd" path="res://scenes/Every Level Used/intro_text.gd" id="1_8f2iw"]
 
 [sub_resource type="Animation" id="Animation_gnssm"]
 length = 0.001
@@ -42,7 +42,7 @@ _data = {
 
 [node name="IntroText" type="Node2D" unique_id=1670804339]
 scale = Vector2(2, 2)
-script = ExtResource("1_xdy68")
+script = ExtResource("1_8f2iw")
 
 [node name="text" type="Label" parent="." unique_id=938091862]
 process_mode = 3

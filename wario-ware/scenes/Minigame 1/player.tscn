@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kewosgkdb532"]
 
-[ext_resource type="Script" uid="uid://cb5ive63sgq3o" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://b4bo7ncpqr6j8" path="res://images/Goose1.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://crluh2qwogqot" path="res://scenes/Minigame 1/player.gd" id="1_his6y"]
+[ext_resource type="Texture2D" uid="uid://b4bo7ncpqr6j8" path="res://images/minigame 1/Goose1.png" id="2_onrkg"]
 
 [sub_resource type="Animation" id="Animation_i3pqv"]
 length = 0.001
@@ -45,7 +45,7 @@ _data = {
 radius = 41.0
 
 [node name="Player" type="CharacterBody2D" unique_id=393043266]
-script = ExtResource("1_onrkg")
+script = ExtResource("1_his6y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=312758513]
 texture_filter = 1

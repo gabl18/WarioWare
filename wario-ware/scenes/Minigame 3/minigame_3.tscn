@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bovhmtbkhyetg" path="res://images/minigame3/Minigame3.png" id="5_elj0y"]
 [ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://scenes/Every Level Used/ThemedTimer.tscn" id="7_0abbc"]
 [ext_resource type="Script" uid="uid://do7bhv5330842" path="res://scenes/Minigame 3/texture_button.gd" id="7_elj0y"]
-[ext_resource type="PackedScene" uid="uid://bksugm73a3w4e" path="res://scenes/Every Level Used/intro_text.tscn" id="9_jqvox"]
-[ext_resource type="Script" uid="uid://dgckm1vqu3xnd" path="res://scenes/Every Level Used/intro_text.gd" id="10_jklhm"]
+[ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="9_jqvox"]
+[ext_resource type="AudioStream" uid="uid://dlbxrkaid8mmp" path="res://music/Microgame 3.mp3" id="11_p7vny"]
 
 [node name="Minigame_3" type="Node2D" unique_id=292362315]
 scale = Vector2(1.9783462, 1.9783462)
@@ -47,7 +47,12 @@ position = Vector2(372, 31)
 
 [node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("9_jqvox")]
 position = Vector2(199.66173, 146.0816)
-script = ExtResource("10_jklhm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=760333843]
+stream = ExtResource("11_p7vny")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="pressed" from="TextureButton" to="TextureRect" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

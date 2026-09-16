@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ixgtsscvbh4b"
+path="res://.godot/imported/Microgame 5.mp3-4a4b15f2d02fe7c8245eb01ba4e94f7d.mp3str"
+
+[deps]
+
+source_file="res://music/Microgame 5.mp3"
+dest_files=["res://.godot/imported/Microgame 5.mp3-4a4b15f2d02fe7c8245eb01ba4e94f7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

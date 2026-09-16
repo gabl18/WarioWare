@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5rqxq8h6ak2r"
+path="res://.godot/imported/Grid Next.mp3-cb698d106bf0b517211af0d6e7feee99.mp3str"
+
+[deps]
+
+source_file="res://music/Grid Next.mp3"
+dest_files=["res://.godot/imported/Grid Next.mp3-cb698d106bf0b517211af0d6e7feee99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d3ivmpyk5b73a"]
 
 [ext_resource type="Script" uid="uid://b2ypbbcguxdak" path="res://scenes/Minigame 4/minigame_4.gd" id="1_c5c30"]
-[ext_resource type="PackedScene" uid="uid://bksugm73a3w4e" path="res://scenes/Every Level Used/intro_text.tscn" id="2_80u0h"]
+[ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="2_80u0h"]
 [ext_resource type="PackedScene" uid="uid://de237fryiqd7g" path="res://scenes/Minigame 4/chimney.tscn" id="2_yanj6"]
 [ext_resource type="Texture2D" uid="uid://c7wb3p553o1wn" path="res://images/Backgrounds/Background6.png" id="3_yanj6"]
 [ext_resource type="PackedScene" uid="uid://bu3h4jlmydjvh" path="res://scenes/Minigame 4/bird.tscn" id="4_wae4i"]
 [ext_resource type="PackedScene" uid="uid://cgwvgvqast5c4" path="res://scenes/Minigame 4/ground.tscn" id="5_wae4i"]
-[ext_resource type="Script" uid="uid://dgckm1vqu3xnd" path="res://scenes/Every Level Used/intro_text.gd" id="8_u3khg"]
+[ext_resource type="AudioStream" uid="uid://b0dtyape2chea" path="res://music/Microgame 4.mp3" id="8_lntxy"]
 
 [node name="Minigame_4" type="Node" unique_id=1748931220]
 script = ExtResource("1_c5c30")
@@ -40,7 +40,6 @@ wait_time = 1.5
 
 [node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("2_80u0h")]
 position = Vector2(441, 326)
-script = ExtResource("8_u3khg")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1398106494]
 z_index = 1
@@ -54,6 +53,12 @@ offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "SCORE: 0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=516019767]
+stream = ExtResource("8_lntxy")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="body_entered" from="ScrollignBackground2/Ground" to="ScrollignBackground2/Ground" method="_on_body_entered"]
 [connection signal="hit" from="ScrollignBackground2/Ground" to="." method="_on_ground_hit"]

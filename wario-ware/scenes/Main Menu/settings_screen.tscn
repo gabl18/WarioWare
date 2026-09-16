@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqeo6qiucobdg" path="res://images/Backgrounds/Background2.png" id="1_00yke"]
 [ext_resource type="Script" uid="uid://cbomardd8ofbo" path="res://scenes/Main Menu/settings_screen.gd" id="1_pfwel"]
+[ext_resource type="AudioStream" uid="uid://bmapotq7sivpt" path="res://music/Main Menu.mp3" id="3_bi8l8"]
 
 [node name="settings_screen" type="Node2D" unique_id=273009670]
 scale = Vector2(2.0800009, 2.0800009)
@@ -26,5 +27,11 @@ offset_bottom = 258.0
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
 text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=59708789]
+stream = ExtResource("3_bi8l8")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

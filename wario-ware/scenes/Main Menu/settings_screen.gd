@@ -3,4 +3,4 @@ extends Node2D
 
 
 func _on_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://title_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/Main Menu/title_screen.tscn")

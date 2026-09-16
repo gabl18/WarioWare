@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://g7fo1iwuu4cm" path="res://scenes/Finish Screen/done_screen.gd" id="1_uqm27"]
 [ext_resource type="Texture2D" uid="uid://bcporj064xor0" path="res://images/Backgrounds/Background4.png" id="2_uqm27"]
 [ext_resource type="Texture2D" uid="uid://ja8xpcxussmq" path="res://images/Emotes/Duck_Emote2.png" id="3_k66lo"]
+[ext_resource type="AudioStream" uid="uid://cdhmkgf1mhdme" path="res://music/Win.mp3" id="4_3chsp"]
 
 [node name="done_screen" type="Node2D" unique_id=1410367120]
 scale = Vector2(1.0000004, 1.0000004)
@@ -58,6 +59,11 @@ offset_right = 315.07697
 offset_bottom = 283.8458
 scale = Vector2(1.2307694, 5.112419)
 texture = ExtResource("3_k66lo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=601586036]
+stream = ExtResource("4_3chsp")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

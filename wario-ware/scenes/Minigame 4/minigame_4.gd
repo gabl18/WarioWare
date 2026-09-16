@@ -9,15 +9,15 @@ var game_over : bool
 var scroll
 var score
 var rand_score : int = 5
-const SCROLL_SPEED : float = 400
+const SCROLL_SPEED : float = 300
 var screen_size : Vector2i
 var ground_height : int
 var chimneys : Array
 
 var rng = RandomNumberGenerator.new()
 
-const CHIMNEY_DELAY : int = 200
-const CHIMNEY_RANGE : int = 150
+const CHIMNEY_DELAY : int = 150
+const CHIMNEY_RANGE : int = 170
 
 
 # Called when the node enters the scene tree for the first time.
@@ -56,6 +56,7 @@ func start_game():
 	game_running = true
 	$Bird.flying = true
 	$Bird.flap()
+	$ChimneyTimer.wait_time = 2.0
 	$ChimneyTimer.start()
 
 func _process(delta: float):
@@ -77,9 +78,14 @@ func _on_chimney_timer_timeout() -> void:
 	generate_chimneys()
 	
 func generate_chimneys():
+	var viewport_size = get_viewport().get_visible_rect().size
 	var chimney = chimney_scene.instantiate()
+	
 	chimney.position.x = screen_size.x + CHIMNEY_DELAY
-	chimney.position.y = (screen_size.y - ground_height) / 2 + randi_range(-CHIMNEY_RANGE, CHIMNEY_RANGE)
+	
+	var playable_height = viewport_size.y - ground_height
+	chimney.position.y = (playable_height / 2.0) + randi_range(-CHIMNEY_RANGE, CHIMNEY_RANGE)
+	
 	chimney.hit.connect(bird_hit)
 	chimney.scored.connect(scored)
 	add_child(chimney)

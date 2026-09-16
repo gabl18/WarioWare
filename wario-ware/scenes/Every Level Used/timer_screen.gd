@@ -9,20 +9,29 @@ extends Node2D
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
+var rng = RandomNumberGenerator.new()
+@onready var rand_level = rng.randi_range(1, 5)
+
 var time
 
 func _ready() -> void:
+	rand_level = rng.randi_range(1, 5)
+	while rand_level == Global.last_minigame:
+		rand_level = rng.randi_range(1, 5)
+	
+	Global.last_minigame = rand_level
+	
 	await Timer(2.0) # using the function created
 	
 	if Global.minigames_done < Global.minigames_needed: # if you havent completed 3 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
-		get_tree().change_scene_to_file("res://scenes/Minigame " + str(Global.minigames_done) + "/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
+		# get_tree().change_scene_to_file("res://scenes/Minigame " + str(Global.minigames_done) + "/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path.
+		get_tree().change_scene_to_file("res://scenes/Minigame " + str(rand_level) + "/minigame_" + str(rand_level) + ".tscn")  
 # Above, your script is being told to go to the next minigame. If the 
 # current minigame is Level 1, then you would be on minigame 1. If you 
 # complete that level, you have the minigames_done add one, and then you 
 # look for the scene titled `minigame_` and then whatever minigame number 
 # should be next. Make sure you name your minigame saves appropriately.
-		print(Global.minigames_done)
 	else:
 		get_tree().change_scene_to_file("res://scenes/Main Menu/title_screen.tscn") # changes your scene
 	
