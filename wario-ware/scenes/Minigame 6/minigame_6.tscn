@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bf5ufgmri6nj2"]
+
+[ext_resource type="Script" uid="uid://bly7hgqhgnakv" path="res://scenes/Minigame 6/minigame_6.gd" id="1_6c6i2"]
+[ext_resource type="Texture2D" uid="uid://cxa5kt3mbhgws" path="res://images/Backgrounds/Background5.png" id="1_q13yq"]
+[ext_resource type="AudioStream" uid="uid://b3hgkdxo5bj1" path="res://music/honk-sound.mp3" id="2_owglu"]
+[ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="3_2jkyk"]
+[ext_resource type="Texture2D" uid="uid://6use1djxgjy" path="res://images/minigame6/rythmhonk1.png" id="3_nylmk"]
+[ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://scenes/Every Level Used/ThemedTimer.tscn" id="4_2vt03"]
+[ext_resource type="AudioStream" uid="uid://cw5fcp07uk636" path="res://music/canada-goose-honk.mp3" id="4_nylmk"]
+[ext_resource type="AudioStream" uid="uid://ct011emshdeht" path="res://music/Microgame 1.mp3" id="6_nylmk"]
+
+[node name="minigame_6" type="Node2D" unique_id=1708751707]
+script = ExtResource("1_6c6i2")
+
+[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=930370572]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(40, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=901517564]
+offset_right = 1132.3889
+offset_bottom = 643.0
+texture = ExtResource("1_q13yq")
+stretch_mode = 1
+
+[node name="GooseSprite" type="Sprite2D" parent="." unique_id=93466303]
+position = Vector2(841.99994, 423.00003)
+scale = Vector2(3.479995, 3.479995)
+texture = ExtResource("3_nylmk")
+
+[node name="Bar" type="ColorRect" parent="." unique_id=1176205643]
+offset_left = 194.00002
+offset_top = 456.0
+offset_right = 234.0
+offset_bottom = 496.0
+scale = Vector2(15, 1)
+
+[node name="TargetZone" type="ColorRect" parent="." unique_id=995864809]
+offset_left = 448.0
+offset_top = 456.0
+offset_right = 488.0
+offset_bottom = 496.0
+scale = Vector2(1.96, 1)
+color = Color(0, 1, 0, 1)
+
+[node name="Pointer" type="ColorRect" parent="." unique_id=2137814496]
+offset_left = 253.99998
+offset_top = 456.0
+offset_right = 294.0
+offset_bottom = 496.0
+scale = Vector2(0.44, 1)
+color = Color(1, 0, 0, 1)
+
+[node name="HonkSound" type="AudioStreamPlayer" parent="." unique_id=759735833]
+stream = ExtResource("2_owglu")
+bus = &"SFX"
+
+[node name="FailSound" type="AudioStreamPlayer" parent="." unique_id=1010170953]
+stream = ExtResource("4_nylmk")
+bus = &"SFX"
+
+[node name="ThemedTimer" parent="." unique_id=31965389 instance=ExtResource("4_2vt03")]
+position = Vector2(459, 43)
+
+[node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("3_2jkyk")]
+position = Vector2(450, 288)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=284270741]
+stream = ExtResource("6_nylmk")
+autoplay = true
+bus = &"Music"
+parameters/looping = true

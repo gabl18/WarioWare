@@ -10,14 +10,14 @@ extends Node2D
 @onready var timer: RichTextLabel = $Timer
 
 var rng = RandomNumberGenerator.new()
-@onready var rand_level = rng.randi_range(1, 5)
+@onready var rand_level = rng.randi_range(1, 6)
 
 var time
 
 func _ready() -> void:
-	rand_level = rng.randi_range(1, 5)
+	rand_level = rng.randi_range(1, 6)
 	while rand_level == Global.last_minigame:
-		rand_level = rng.randi_range(1, 5)
+		rand_level = rng.randi_range(1, 6)
 	
 	Global.last_minigame = rand_level
 	

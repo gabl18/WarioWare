@@ -5,6 +5,6 @@ Minigame Ideas:
 * Find sth
 * Balance
 * Survive
-* Rythm Game
-* Dont Click
+* Rythm Game - DONE
+* Dont Click - DONE
 * Powermeter
