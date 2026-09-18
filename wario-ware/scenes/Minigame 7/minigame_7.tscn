@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dt401n3dly1w7"]
 
 [ext_resource type="Texture2D" uid="uid://c7wb3p553o1wn" path="res://images/Backgrounds/Background6.png" id="1_1o3kg"]
+[ext_resource type="Script" uid="uid://brfyjew8eqq5g" path="res://scenes/Minigame 7/minigame_7.gd" id="1_axrh0"]
 [ext_resource type="Texture2D" uid="uid://8844hjoqhsdq" path="res://images/minigame7/running_goose1.png" id="2_axrh0"]
 [ext_resource type="AudioStream" uid="uid://b3hgkdxo5bj1" path="res://music/honk-sound.mp3" id="3_s0xcp"]
 [ext_resource type="AudioStream" uid="uid://cw5fcp07uk636" path="res://music/canada-goose-honk.mp3" id="4_3lf5o"]
@@ -12,6 +13,7 @@
 radius = 12.740639
 
 [node name="minigame_7" type="Node2D" unique_id=782172186]
+script = ExtResource("1_axrh0")
 
 [node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1989526573]
 repeat_size = Vector2(400, 0)
@@ -28,7 +30,7 @@ offset_top = 585.0
 offset_right = 40.0
 offset_bottom = 625.0
 scale = Vector2(25.360003, 1.6)
-color = Color(0.23345345, 0.15425614, 0.106677316, 1)
+color = Color(0.21047164, 0.22624025, 0.23033261, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1696711960]
 position = Vector2(120.000015, 516)
@@ -43,6 +45,8 @@ scale = Vector2(3.5999985, 3.5999985)
 position = Vector2(-9.722231, 6.6666703)
 scale = Vector2(1.3765968, -1.0375763)
 shape = SubResource("CircleShape2D_sjg42")
+
+[node name="ObstacleContainer" type="Node2D" parent="." unique_id=739697488]
 
 [node name="HonkSound" type="AudioStreamPlayer" parent="." unique_id=1466072923]
 stream = ExtResource("3_s0xcp")
