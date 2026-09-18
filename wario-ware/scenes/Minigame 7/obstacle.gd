@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 400.0
+@export var speed = 600.0
 var passed = false
 
 func _process(delta: float) -> void:
