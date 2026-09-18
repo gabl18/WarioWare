@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://1h33esv0gp8w" path="res://images/minigame5/dont_touch1.png" id="3_a6h0v"]
 [ext_resource type="Script" uid="uid://5rhaple4somu" path="res://scenes/Minigame 5/texture_button.gd" id="3_jsmqe"]
 [ext_resource type="AudioStream" uid="uid://ixgtsscvbh4b" path="res://music/Microgame 5.mp3" id="4_jsmqe"]
+[ext_resource type="AudioStream" uid="uid://cw5fcp07uk636" path="res://music/canada-goose-honk.mp3" id="8_a6h0v"]
 
 [node name="Minigame_5" type="Node2D" unique_id=2070303391]
 script = ExtResource("1_06nyv")
@@ -41,5 +42,9 @@ stream = ExtResource("4_jsmqe")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+
+[node name="FailSFX" type="AudioStreamPlayer" parent="." unique_id=901995953]
+stream = ExtResource("8_a6h0v")
+bus = &"SFX"
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

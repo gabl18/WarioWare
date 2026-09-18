@@ -145,7 +145,6 @@ position = Vector2(517.85645, 282.1425)
 stream = ExtResource("10_88atl")
 autoplay = true
 bus = &"Music"
-parameters/looping = true
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]

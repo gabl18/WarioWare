@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dd082ckoytngl"]
+
+[ext_resource type="Script" uid="uid://b2cxnnkamwqh2" path="res://scenes/Minigame 7/obstacle.gd" id="1_qsnne"]
+[ext_resource type="Texture2D" uid="uid://y02bmskpsfbx" path="res://images/minigame7/minigame7assets2.png" id="2_u4mtf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykh0f"]
+size = Vector2(34.7272, 39.163837)
+
+[node name="Obstacle" type="Area2D" unique_id=692439238]
+script = ExtResource("1_qsnne")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=768870253]
+texture = ExtResource("2_u4mtf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=285331736]
+position = Vector2(-0.36408615, 8.441172)
+scale = Vector2(1.1152116, 0.53320473)
+shape = SubResource("RectangleShape2D_ykh0f")

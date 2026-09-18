@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bf5ufgmri6nj2"]
 
 [ext_resource type="Script" uid="uid://bly7hgqhgnakv" path="res://scenes/Minigame 6/minigame_6.gd" id="1_6c6i2"]
-[ext_resource type="Texture2D" uid="uid://cxa5kt3mbhgws" path="res://images/Backgrounds/Background5.png" id="1_q13yq"]
+[ext_resource type="Texture2D" uid="uid://b27knk8vooihm" path="res://images/Backgrounds/Background8.png" id="2_nylmk"]
 [ext_resource type="AudioStream" uid="uid://b3hgkdxo5bj1" path="res://music/honk-sound.mp3" id="2_owglu"]
 [ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="3_2jkyk"]
 [ext_resource type="Texture2D" uid="uid://6use1djxgjy" path="res://images/minigame6/rythmhonk1.png" id="3_nylmk"]
@@ -17,9 +17,9 @@ repeat_size = Vector2(400, 0)
 autoscroll = Vector2(40, 0)
 
 [node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=901517564]
-offset_right = 1132.3889
-offset_bottom = 643.0
-texture = ExtResource("1_q13yq")
+offset_right = 2000.0
+offset_bottom = 1500.0
+texture = ExtResource("2_nylmk")
 stretch_mode = 1
 
 [node name="GooseSprite" type="Sprite2D" parent="." unique_id=93466303]

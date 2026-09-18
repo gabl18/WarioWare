@@ -22,7 +22,7 @@ func _ready() -> void:
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
 
-func _process(delta: float) -> void: # running every frame brochacho
+func _process(_delta: float) -> void: # running every frame brochacho
 	if garlic_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
 		if Global.minigames_done >= Global.minigames_needed: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file("res://scenes/Finish Screen/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn

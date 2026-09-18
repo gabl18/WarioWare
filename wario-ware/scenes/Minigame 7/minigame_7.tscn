@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dt401n3dly1w7"]
+
+[ext_resource type="Texture2D" uid="uid://c7wb3p553o1wn" path="res://images/Backgrounds/Background6.png" id="1_1o3kg"]
+[ext_resource type="Texture2D" uid="uid://8844hjoqhsdq" path="res://images/minigame7/running_goose1.png" id="2_axrh0"]
+[ext_resource type="AudioStream" uid="uid://b3hgkdxo5bj1" path="res://music/honk-sound.mp3" id="3_s0xcp"]
+[ext_resource type="AudioStream" uid="uid://cw5fcp07uk636" path="res://music/canada-goose-honk.mp3" id="4_3lf5o"]
+[ext_resource type="PackedScene" uid="uid://ch0ete1dwmhb2" path="res://scenes/Every Level Used/ThemedTimer.tscn" id="5_gntve"]
+[ext_resource type="PackedScene" uid="uid://0kahh53oqh5a" path="res://scenes/Every Level Used/intro_text.tscn" id="6_shro4"]
+[ext_resource type="AudioStream" uid="uid://utsd43mh3b0f" path="res://music/Microgame 2.mp3" id="7_gjl17"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sjg42"]
+radius = 12.740639
+
+[node name="minigame_7" type="Node2D" unique_id=782172186]
+
+[node name="ScrollignBackground" type="Parallax2D" parent="." unique_id=1989526573]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(40, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollignBackground" unique_id=308818462]
+offset_right = 1132.3889
+offset_bottom = 643.0
+texture = ExtResource("1_1o3kg")
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1411798862]
+offset_top = 585.0
+offset_right = 40.0
+offset_bottom = 625.0
+scale = Vector2(25.360003, 1.6)
+color = Color(0.23345345, 0.15425614, 0.106677316, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1696711960]
+position = Vector2(120.000015, 516)
+scale = Vector2(3.5999985, 3.5999985)
+texture = ExtResource("2_axrh0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=226876510]
+position = Vector2(120.000015, 516)
+scale = Vector2(3.5999985, 3.5999985)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1770740314]
+position = Vector2(-9.722231, 6.6666703)
+scale = Vector2(1.3765968, -1.0375763)
+shape = SubResource("CircleShape2D_sjg42")
+
+[node name="HonkSound" type="AudioStreamPlayer" parent="." unique_id=1466072923]
+stream = ExtResource("3_s0xcp")
+bus = &"SFX"
+
+[node name="FailSound" type="AudioStreamPlayer" parent="." unique_id=480469952]
+stream = ExtResource("4_3lf5o")
+bus = &"SFX"
+
+[node name="ThemedTimer" parent="." unique_id=31965389 instance=ExtResource("5_gntve")]
+position = Vector2(459, 43)
+
+[node name="IntroText" parent="." unique_id=1670804339 instance=ExtResource("6_shro4")]
+position = Vector2(450, 288)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=153235886]
+stream = ExtResource("7_gjl17")
+autoplay = true
+bus = &"Music"
+parameters/looping = true

@@ -1,6 +1,7 @@
 extends TextureButton
 
 @onready var parent = $".."
+@onready var fail_sfx: AudioStreamPlayer = $"../FailSFX"
 
 const normal1 = preload("res://images/minigame5/dont_touch1.png")
 const normal2 = preload("res://images/minigame5/dont_touch2.png")
@@ -31,5 +32,6 @@ func start_animation():
 func _on_pressed() -> void:
 	texture_pressed = honk
 	texture_normal = honk
-	await get_tree().create_timer(1.0).timeout
+	fail_sfx.play()
+	await fail_sfx.finished
 	parent.buttons_pressed += 1

@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var themed_timer: Node2D = $ThemedTimer
 @onready var intro_text: Node2D = $IntroText
+
 var rand_score = 4.0
 var rng = RandomNumberGenerator.new()
 
@@ -21,7 +22,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if buttons_pressed >= 1:
 		Global.lives -= 1
 		Global.minigames_done -=1

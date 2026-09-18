@@ -15,7 +15,7 @@ func _ready() -> void:
 	timer_end = true 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if buttons_pressed == 6:
 		if Global.minigames_done >= Global.minigames_needed:
 			get_tree().change_scene_to_file("res://scenes/Finish Screen/done_screen.tscn")

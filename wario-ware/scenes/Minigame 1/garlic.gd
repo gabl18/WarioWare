@@ -9,7 +9,7 @@ extends Node2D
 # make a signal
 signal garlic_collected
 
-func _process(delta: float) -> void: # this runs EVERY FRAME! 
+func _process(_delta): # this runs EVERY FRAME! 
 	
 	if player_area.overlaps_area(self_area): # checks if overlapping
 		if self.visible:

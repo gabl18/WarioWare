@@ -207,7 +207,6 @@ position = Vector2(463.63635, 293.18182)
 stream = ExtResource("10_hy3rl")
 autoplay = true
 bus = &"Music"
-parameters/looping = true
 
 [connection signal="garlic_collected" from="Garlic" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Garlic2" to="." method="garlic_collect"]

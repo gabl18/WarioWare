@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var themed_timer: Node2D = $ThemedTimer
 @onready var intro_text: Node2D = $IntroText
+
 var rand_score = 18
 var rng = RandomNumberGenerator.new()
 
